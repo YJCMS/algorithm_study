@@ -7,12 +7,10 @@ public class Main {
         int x = in.nextInt();
         int[] arr = new int[n];
         String result = "";
-        
+
         for(int i = 0; i < n; i++) {
             arr[i] = in.nextInt();
-            if(arr[i] < x) result += arr[i] + " ";
+            if(arr[i] < x) System.out.print(arr[i] + " ");
         }
-        result = result.trim();
-        System.out.print(result);
     }
 }
