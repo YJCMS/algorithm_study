@@ -6,15 +6,14 @@ public class Main {
     public static void main(String[] args) throws IOException  {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int result = n;
+        int result = factorial(n);
+        System.out.println(result);
 
-        if(n > 0) {
-            for(int i = n-1; i > 0; i--) {
-                result *= i;
-            }
-            System.out.println(result);
-        } else {
-            System.out.println(1);
+    }
+    public static int factorial(int N) {
+        if(N <= 1) {
+            return 1;
         }
+        return N * factorial(N-1);
     }
 }
