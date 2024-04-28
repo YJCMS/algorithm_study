@@ -1,32 +1,36 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
+        StringBuilder sb = new StringBuilder();
 
-        int n = in.nextInt();
-        int m = in.nextInt();
+        st = new StringTokenizer(br.readLine());
+        int n = Integer.parseInt(st.nextToken());
+        int m = Integer.parseInt(st.nextToken());
 
         int[][] arr = new int[n][m];
 
         for(int i = 0; i < n; i++) {
+            st = new StringTokenizer(br.readLine());
             for(int j = 0; j < m; j++) {
-                arr[i][j] = in.nextInt();
-            }
-        }
-
-        int[][] arr2 = new int[n][m];
-
-        for(int i = 0; i < n; i++) {
-            for(int j = 0; j < m; j++) {
-                arr2[i][j] = in.nextInt();
+                arr[i][j] += Integer.parseInt(st.nextToken());
             }
         }
 
         for(int i = 0; i < n; i++) {
+            st = new StringTokenizer(br.readLine());
             for(int j = 0; j < m; j++) {
-                System.out.println(arr[i][j] + arr2[i][j]);
+                arr[i][j] += Integer.parseInt(st.nextToken());
+                sb.append(arr[i][j]).append(" ");
             }
+            sb.append('\n');
         }
+
+        System.out.println(sb);
     }
 }
