@@ -1,9 +1,11 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class Main{
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int x = in.nextInt(), y = in.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int x = Integer.parseInt(br.readLine());
+        int y = Integer.parseInt(br.readLine());
+        
         if(x>0) {
             if(y>0) {
                 System.out.println("1");
