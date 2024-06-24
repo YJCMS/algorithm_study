@@ -1,15 +1,17 @@
-import java.util.Scanner;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
         int a = 2;
         
-        for(int i = 1; i <= n; i++) {
-            a += (a-1);
+        for(int i = 0; i < n; i++) {
+            a += a-1;
         }
         
-        System.out.print(a*a);
+        System.out.println(a*a);
     }
 }
