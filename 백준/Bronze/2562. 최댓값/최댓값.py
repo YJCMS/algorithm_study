@@ -1,5 +1,5 @@
-numbers = []
+list_n = []
 for i in range(9) :
-    numbers.append(int(input()))
-print(max(numbers))
-print(numbers.index(max(numbers)) + 1)
+    list_n.append(int(input()))
+print(max(list_n))
+print(list_n.index(max(list_n))+1)
