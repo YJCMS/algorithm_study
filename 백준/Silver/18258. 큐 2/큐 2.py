@@ -2,7 +2,7 @@ import sys
 from collections import deque
 n = int(sys.stdin.readline())
 
-queue = deque([])
+queue = deque()
 
 for i in range(n):
     rl = sys.stdin.readline().split()
