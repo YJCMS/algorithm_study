@@ -10,7 +10,6 @@ def dfs(graph, start, visited):
 n, m = map(int, sys.stdin.readline().split())
 graph = [[] for _ in range(n+1)]
 visited = [False] * (n+1)
-index = 2
 
 for i in range(m):
     u, v = map(int, sys.stdin.readline().split())
