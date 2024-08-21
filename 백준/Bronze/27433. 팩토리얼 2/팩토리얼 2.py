@@ -1,12 +1,9 @@
 import sys
 
 n = int(sys.stdin.readline())
-result = n;
-if n == 0:
-    result = 1
-else :
-    for i in range(n-1, 0, -1):
-        result *= i
-    
+result = 1
+
+for i in range(1, n+1) :
+    result *= i
+
 print(result)
-    
