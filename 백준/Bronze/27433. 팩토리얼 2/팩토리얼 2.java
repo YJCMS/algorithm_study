@@ -1,20 +1,17 @@
-import java.io.*;
-import java.lang.reflect.Array;
-import java.util.*;
-import java.util.Collections;
-public class Main{
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-    public static long factorial(long n){
-        if(n==0||n==1){
-            return 1;
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        long result = 1;
+
+        for(int i = n; i > 0; i--) {
+            result = result * i;
         }
-        else{
-            return n*factorial(n-1);
-        }
-    }
-    public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-       long n=scanner.nextLong();
-        System.out.println(factorial(n));
+        
+        System.out.println(result);
     }
 }
